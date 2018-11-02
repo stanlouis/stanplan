@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectSummary from './ProjectSummary';
 
-const ProjectList = () => {
+const ProjectList = (props) => {
   return (
     <div className="project-list section">
       <ProjectSummary />
