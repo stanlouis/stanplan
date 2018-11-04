@@ -4,8 +4,8 @@ export const CREATE_PROJECT_ERROR = 'CREATE_PROJECT_ERROR';
 export const createProject = project => {
   return (dispatch, getState, { getFirebase, getFirestore }) => {
     // make async call to database
-    const firestore = getFirestore();
-    firestore
+    const firestore_db = getFirestore();
+    firestore_db
       .collection('projects')
       .add({
         ...project,
