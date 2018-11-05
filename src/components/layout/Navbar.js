@@ -5,6 +5,7 @@ import SignedOutLinks from './SignedOutLinks';
 import { connect } from "react-redux";
 
 const Navbar = ({auth}) => {
+  // display links based on login status
   const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks/>
   return (
     <nav className="nav-wrapper navbg">
