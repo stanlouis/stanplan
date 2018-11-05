@@ -1,5 +1,6 @@
 # ThePlan
 Based on the course - [React, Redux & Firebase App Tutorial](https://youtu.be/Oi4v5uxTY5o)
+
 To run the project:
 
 1. Clone this repo
