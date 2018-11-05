@@ -15,7 +15,7 @@ const Navbar = ({ auth, profile }) => {
     <nav className="nav-wrapper navbg">
       <div className="container">
         <Link to="/" className="brand-logo">
-          StanPlan
+          ThePlan
         </Link>
         {links}
       </div>
