@@ -2,26 +2,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-const Navbar = ({auth}) => {
+const Navbar = ({ auth, profile }) => {
   // display links based on login status
-  const links = auth.uid ? <SignedInLinks /> : <SignedOutLinks/>
+  const links = auth.uid ? (
+    <SignedInLinks profile={profile} />
+  ) : (
+    <SignedOutLinks />
+  );
   return (
     <nav className="nav-wrapper navbg">
       <div className="container">
         <Link to="/" className="brand-logo">
           StanPlan
         </Link>
-        { links }
+        {links}
       </div>
     </nav>
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    auth: state.firebase.auth
-  }
-}
+    auth: state.firebase.auth,
+    profile: state.firebase.profile
+  };
+};
 export default connect(mapStateToProps)(Navbar);
